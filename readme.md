@@ -1,3 +1,0 @@
-gyugbhb,
-ghhtjdj
-hbhsgs cs
