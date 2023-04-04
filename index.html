@@ -11,59 +11,46 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Web Training | Intro component with sign up form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Web Training | Tip calculator app</title>
   </head>
   <body>
-    <div class="container">
-      <div class="left-side">
-        <h1 class="main-heading">
-          Learn to code by watching others
-        </h1>
-        <p class="main-content">
-          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-          but understanding how developers think is invaluable. 
-  
-        </p>
-      </div>
-      <div class="right-side">
-        <p class="message">
-          <strong>Try it free 7 days </strong>  then $20/mo. thereafter
-        </p>
-        <div class="card">
-          <form name="signupForm">
-            <div class="input-group" id="firstNameGroup">
-              <input name="firstName" type="text" placeholder="First Name">
-              <small class="message"></small>
-            </div>
-            <div class="input-group" id="lastNameGroup">
-              <input name="lastName" type="text" placeholder="Last Name">
-              <small class="message"></small>
-            </div>
-            <div class="input-group" id="emailGroup">
-              <input name="email" type="text" placeholder="Email Address">
-              <small class="message"></small>
-            </div>
-            <div class="input-group" id="passwordGroup">
-              <input name="password" type="password" placeholder="Password">
-              <small class="message"></small>
-            </div>
-            <button id="submitButton" class="button"> Claim your free trial</button>
-          </form>
-          <p class="privacy-message">
-            By clicking the button, you are agreeing to our <a href="">Terms and Services</a>
-          </p>
+    <div class="calculator-container">
+      <div class="calculator">
+        <div class="input-group">
+          <label for="">Bill</label>
+          <input type="text" name="" id="">
+        </div>
+        <div class=input-group"">
+          <label for="">Select Tip %</label>
+          <div class="tips-group">
+            <button class="button">5%</button>
+            <button class="button">10%</button>
+            <button class="button">15%</button>
+            <button class="button">20%</button>
+            <button class="button">25%</button>
+            <input type="text" class="button" placeholder="Custom">
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="">Number of People</label>
+          <input type="text">
         </div>
       </div>
+      <div class="calculation-result">
+        <div class="tips-amount calculation-amount">
+          <div class="title">Tips Amount / person</div>
+          <div class="amount">$4.27</div>
+        </div>
+        <div class="total-amount calculation-amount">
+          <div class="title"> Total Amount / person</div>
+          <div class="amount">$52.22</div>
+        </div>
+        <button class="button">Reset</button>
+      </div>
     </div>
-    <script src="./script.js"></script>
   </body>
 </html>

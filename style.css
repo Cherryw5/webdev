@@ -1,113 +1,74 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --primary-font: 'Space Mono',serif;
+    --color-primary: hsl(172, 67%, 45%);
+    --color-neutral-1: hsl(183, 100%, 15%);
+    --color-neutral-2: hsl(186, 14%, 43%);
+    --color-neutral-3: hsl(184, 14%, 56%);
+    --color-neutral-4: hsl(185, 41%, 84%);
+    --color-neutral-5: hsl(189, 41%, 97%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --font-size: 10px;
+    --font-input-size: 24px;
 }
 
-body {
-    background-image: url(./images/bg-intro-desktop.png);
-    background-color: hsl(0, 100%, 74%);
+body{
+    min-height: 100vh;
+    background-color: var(--color-neutral-4);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--primary-font);    
 }
-
-.container{
-    width: 1280px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-
-}
-
-.left-side{
-    color: white;
-    width: 40%;
-    
-}
-.main-heading{
-    font-size: 60px;
-    line-height:1.1 ;
-}
-
-.main-content{
-    margin-top: 20px;
-    font-weight:500 ;
-}
-
-.right-side > .message {
-    background-color: hsl(248, 32%, 49%);
-    padding: 15px 20px;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
-
-}
-
-.card{
-    background-color: white;
+.calculator-container{
+    background-color: var(--color-white);
     padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    width: 50vw;
 }
-
-.card form input{
-    width: 100%;
-    padding: 15px 20px;
-    border: 1px solid hsl(246, 25%, 77%);
+.calculator-container .calculator{
+    width: 50%;
 }
-
-input::placeholder ,input{
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+label, input{
+    display: block;
 }
-
-input:active, input:focus{
-    outline: 1px solid hsl(248, 32%, 49%);
-}
-.button{
-    width: 100%;
-    background-color: green;
-    text-align: center;
-    padding: 15px 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    border: none;
-    color: white;
-    text-transform: uppercase;
-    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-}
-
-
 .input-group{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.input-group.error input {
-    border: 1px solid hsl(0, 100%, 74%);
+.input-group label{
+    font-size: 18px;
+    color: var(--color-neutral-1);
+    margin-bottom: 5px;
+    font-weight: 700;
 }
-.input-group.error .message {
-    color: hsl(0, 100%, 74%);
+.input-group input{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--color-neutral-5);
+    border: none;
 }
-.input-group.error input::placeholder {
-    color: hsl(0, 100%, 74%);
+.tips-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.privacy-message {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: hsl(246, 25%, 77%);
+.tips-group .button{
+    background-color: var(--color-neutral-1);
+    padding: 10px 30px;
+    border: none;
+    color: var(--color-white);
+    font-size: var(--font-input-size);
+    width: calc(33.33% - 40px);
+    flex: 1;
 }
 
-.privacy-message a{
-    text-decoration: none;
-    color: hsl(0, 100%, 74%);
-    font-weight: 600;
-}
